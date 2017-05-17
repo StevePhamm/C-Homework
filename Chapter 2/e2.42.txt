@@ -1,0 +1,58 @@
+#include <string>
+#include <iostream>
+using namespace std;
+
+struct Sales_data
+{
+	std::string bookNo;
+	unsigned units_sold = 0;
+	double revenue = 0.0;
+
+	void CalcRevenue(double price);
+	double CalcAveragePrice();
+	void SetData(Sales_data data);
+	void AddData(Sales_data data);
+	void Print();
+};
+
+void Sales_data::CalcRevenue(double price)
+{
+	revenue = units_sold * price;
+}
+
+double Sales_data::CalcAveragePrice()
+{
+	if (units_sold != 0)
+		return revenue / units_sold;
+	else
+		return 0.0;
+}
+
+void Sales_data::SetData(Sales_data data)
+{
+	units_sold = data.units_sold;
+	revenue = data.revenue;
+	bookNo = data.bookNo;
+}
+
+void Sales_data::AddData(Sales_data data)
+{
+	if (bookNo != data.bookNo)
+	{
+		revenue += data.revenue;
+		units_sold = data.units_sold;
+	}
+}
+
+void Sales_data::Print()
+{
+	double avgprice = CalcAveragePrice();
+	if (avgprice != 0.0)
+	{
+		cout << avgprice << endl;
+	}
+	else
+	{
+		cout << "No sales" << endl;
+	}
+}

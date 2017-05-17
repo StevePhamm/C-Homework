@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int fact(int val)
+{
+	int r = 1;
+	while (val > 1)
+	{
+		r *= val;
+		val--;
+	}
+	return r;
+}
+
+int main()
+{
+	int x;
+	cout << "Enter the number you want for the factorial: " << endl;
+	cin >> x;
+	cout << "The factorial is: " << fact(x) << endl;
+	system("pause");
+	return 0;
+}

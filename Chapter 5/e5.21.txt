@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+	string x, y;
+	char r;
+	cout << "Enter the words: ";
+	while (cin >> x)
+	{
+		if (isupper(x[0]) && x == y) {
+			cout << "The words are the same. " << endl;
+			break;
+		}
+		else
+			y = x;
+
+	}
+	system("pause");
+	return 0;
+}
+

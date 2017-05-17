@@ -1,0 +1,12 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    int a = 3, b = 4; // a = 3, b = 4
+    decltype(a) c = a; // c = 3
+    decltype((b)) d = a; // d = 3
+    ++c; // c = 4
+    ++d; // d = 4, a = 4 
+}

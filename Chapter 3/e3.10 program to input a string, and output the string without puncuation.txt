@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using std::cin;
+using std::cout;
+using std::endl;
+using std::getline;
+using std::string;
+
+
+int main()
+{
+	string str;
+	cout << "Enter a string value: "; // Tell user to input string
+	getline(cin, str); // Input the string
+	for (auto c : str)
+		if (!ispunct(c))
+			cout << c;
+	cout << endl;
+	system("pause");
+	return 0;
+
+}
+	

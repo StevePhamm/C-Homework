@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using std::cin;
+using std::cout;
+using std::endl;
+using std::getline;
+using std::string;
+
+int main()
+{
+	string str = "some string";
+	// print the characters in str one character to a line
+	for (char &c : str) // for every char in str, changing c to char would not change anything since c is char either way
+	{
+		c = 'X';
+	}
+	cout << "The string str: " << str << endl;
+	system("pause");
+	return 0;
+}
+	
+		

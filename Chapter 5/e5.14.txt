@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using std::cout; using std::cin; using std::endl; using std::string; using std::pair; using namespace std;
+
+int main()
+	{
+		vector<string> v;
+		string i, prev, word;
+		unsigned int repeat = 1, max = 1;
+		while (cin >> i)
+		{
+			if (i == "done")
+			{
+				break;
+			}
+			else
+				v.push_back(i);
+		}
+			v.push_back(i);
+		auto it = v.begin();
+		while (it != v.end()) {
+			if (*it == prev)
+			{
+				++repeat;
+				if (repeat > max)
+				{
+					max = repeat;
+					word = *it;
+				}
+			}
+			else
+				repeat = 1;
+			prev = *it;
+			++it;
+			}
+		if (!word.empty())
+			cout << word << "occured " << max << endl;
+		else
+			cout << "There are no repeating worlds" << endl;
+
+		system("pause");
+		return 0;
+	}

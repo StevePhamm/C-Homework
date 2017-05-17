@@ -1,0 +1,37 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int func(const int x, const int y)
+typedef decltype(func) fp; 
+
+int add(const int x,const int y)
+{
+	return x+y;
+}
+
+int sub(const int x, const int y)
+{
+	return x-y;
+}
+
+int mul(const int x, const int y)
+{
+	return x*y;
+}
+
+int div(const int x, const int y)
+{
+	return x/y;
+}
+
+
+vector<*fp> vec = {add, sub, mul, div);
+
+int main()
+{
+	for (auto it = v.begin(); it != v.end(); ++it)
+		cout << (*it)(2,4) << endl;
+	system("pause);
+	return 0;
+}

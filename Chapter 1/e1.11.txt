@@ -1,0 +1,30 @@
+#include <iostream>
+using std::cout;
+using std::cin;
+using namespace std;
+
+void func(int high, int low)
+{
+	
+	if (low > high)
+	{
+		func(low, high);
+		return;
+	}
+	for (int i = low; i <= high; i++)
+	{
+		cout << i << " ";
+	}
+}
+
+int main()
+{
+	int x, y;
+	cout << "Enter two numbers to see the range: " << endl;
+	cin >> x >> y;
+	cout << "The range of the numbers is: ";
+	func(x, y);
+	cout << " " << endl;
+	system("pause");
+	return 0;
+}

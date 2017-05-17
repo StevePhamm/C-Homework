@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using std::vector;
+using std::string;
+using std::cout;
+using std::endl;
+using std::cin;
+
+
+int main()
+{
+	vector<string> v = {"F", "D", "C", "B", "A", "A++"};
+	string lettergrade;
+	int grade;
+	cout << "Enter grades from 0 to 100: " << endl;
+	while (cin >> grade && grade <= 100)
+	{
+		if (grade < 60)
+		{
+			lettergrade = v[0];
+			cout << "You're a dumbass, you got a " << lettergrade << endl;
+		}
+		else
+		{
+			lettergrade = v[(grade - 50) / 10];
+			cout << lettergrade << endl;
+		}
+	}
+	system("pause");
+	return 0;
+}
+

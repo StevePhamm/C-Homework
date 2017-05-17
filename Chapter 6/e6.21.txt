@@ -1,0 +1,31 @@
+#include <iostream>
+
+#include <string>
+
+using std::cout; usng std::endl; using std::string;
+
+
+
+int comp(int x, int *p)
+
+{
+    
+	return (x > *p) ? x : *p;
+
+}
+
+
+
+int main()
+
+{
+    
+	int i = 2;
+    
+	cout << comp(1, &i);
+    
+
+   
+	return 0;
+
+}

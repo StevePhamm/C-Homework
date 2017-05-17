@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+int main()
+{
+	string x, y;
+	char r;
+	do {
+		cout << "Enter the first word: ";
+		cin >> x;
+		cout << "Enter the second word: ";
+		cin >> y;
+		if (x.size() > y.size())
+		{
+			cout << "The first word is greater than the second. " << endl;
+		}
+		else if (y.size() > x.size())
+		{
+			cout << "The second word is greater than the first. " << endl;
+		}
+		else
+			cout << "No data or the same " << endl;
+
+		cout << "Do you want to continue? (no = n) ";
+		cin >> r;
+
+	} while (r != 'n');
+	system("pause");
+	return 0;
+
+	
+	
+}

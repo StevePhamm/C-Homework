@@ -1,0 +1,33 @@
+#include <iostream>
+#include "Sales_item.h"
+using std::cout;
+using std::cin;
+using namespace std;
+
+int main()
+{
+	Sales_item total;
+	Sales_item sum;
+	int count = 1;
+	cout << "Please enter the isbn, quantity, and price: " << endl;
+	if (cin >> total)
+	{
+		Sales_item trans;
+		while (cin >> trans)
+		{
+			if (total.isbn() == trans.isbn())
+			{
+				total += trans;
+				count++;
+			}
+			else
+			{
+				cout << "The total is: " << total << endl;
+				cout << "The number of transactions is: " << count << endl;
+				break;
+			}
+		}
+	}
+	system("pause");
+	return 0;
+}

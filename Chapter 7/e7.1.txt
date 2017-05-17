@@ -1,0 +1,40 @@
+// Example program
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Sales_Data
+{
+    string isbn;
+    unsigned int sold = 0;
+    double revenue = 0.0;
+};
+
+int main()
+{
+  Sales_Data total; // This is an object for the class Sales_Data
+  if (cin >> total.isbn >> total.sold >> total.revenue)
+  {
+    Sales_Data trans;
+    while (cin >> total.isbn >> total.sold >> total.revenue)
+    {
+        if (total.isbn == total.isbn)
+        {
+            total.sold += total.sold;
+            total.revenue += total.revenue;
+        }
+        else
+        {
+            cout << total.isbn << " " << total.sold << " " << total.revenue << endl;
+            total = trans; // Resets object, so everything is 0.
+        }
+        cout << total.isbn << " " << total.sold << " " << total.revenue << endl;
+    }
+  }
+  else
+    {
+        cout << "No data?!" << std::endl;
+        return -1;
+    }
+    return 0;
+}

@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using std::cin;
+using std::cout;
+using std::endl;
+using std::getline;
+using std::string;
+
+int main()
+{
+	string s, t;
+	while (cin >> s)
+	{
+		if (s != "0")
+			t += (s + " ");
+		else
+			break;
+	}
+
+	cout << t << endl;
+	system("pause");
+	return 0;
+} 
+

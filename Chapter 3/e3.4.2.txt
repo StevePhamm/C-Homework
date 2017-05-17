@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using std::cin;
+using std::cout;
+using std::endl;
+using std::getline;
+using std::string;
+int main()
+{
+	string s, t;
+	cin >> s >> t; 
+	if (s.size() == t.size())
+	{
+		cout << "The strings are equal" << endl;
+	}
+	else if (s.size() > t.size())
+	{
+		cout << "The string s is greater than t" << endl;
+	}
+	else
+	{
+		cout << "The string t is greater than s" << endl;
+	}
+	system("pause");
+	return 0;
+}

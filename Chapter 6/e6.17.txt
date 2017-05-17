@@ -1,0 +1,46 @@
+#include <iostream>
+
+#include <string>
+
+using namespace std;
+
+
+bool cap(string const &c)
+
+{
+    
+	for (auto x : c)
+        
+	if (isupper(x)) return true;
+    
+	return false;    
+
+}
+
+
+
+void dude(string &c)
+
+{
+    
+	for (auto &x : c)
+        
+	x = tolower(x);
+
+}
+
+
+
+
+int main() 
+{
+	
+	string y = "Hello World";
+	
+	cout << cap(y) << endl;
+	
+	cout << dude(y) << endl;
+	
+	return 0;
+
+}

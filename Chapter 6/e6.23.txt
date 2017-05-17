@@ -1,0 +1,38 @@
+#include <iostream>
+
+#include <string>
+
+using std::cout; using std::endl; using std::string;
+
+
+
+void comp(int x, int p[])
+
+{
+    
+	cout << "i = " << x << endl;
+        
+	for (int a = 0; a < 2; a++)
+            
+	cout << "j = " << p[a] << endl;
+
+}
+
+
+
+int main()
+
+{
+    
+	int j[2] = {1, 2};
+    
+	int i = 3;
+    
+	comp(i, j);
+    
+    
+
+    
+	return 0;
+
+}

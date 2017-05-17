@@ -1,0 +1,18 @@
+#include <iostream>
+#include <stdexcept>
+using std::cin; using std::cout; using std::endl; using std::runtime_error;
+
+void reset(int &a)
+{
+	a = 0;
+}
+
+int main()
+{
+	int x;
+	cin >> x;
+	reset(x);
+	cout << x << endl;
+	system("pause");
+	return 0;
+}

@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+
+bool isit(vector<int> r, vector<int> l)
+{
+	if (r.size() > l.size())
+	{
+		return isit(l, r);
+	}
+	for (int i = 0; i != l.size(); i++) {
+		if (r[i] == l[i])
+			return true;
+		else
+			return false;
+	}
+}
+
+
+
+int main()
+{
+	vector<int> v1, v2;
+	int i, input1, input2, k;
+	cout << "Enter the number of elements v1: ";
+	cin >> i;
+	for (i; i > 0; i--)
+	{
+		cin >> input1;
+		v1.push_back(input1);
+	}
+	cout << "Enter the elements for v2: ";
+	cin >> k;
+	for (k; k > 0; k--)
+	{
+		cin >> input2;
+		v2.push_back(input2);
+	}
+
+	cout << (isit(v1, v2) ? "yes" : "no") << endl;
+	system("pause");
+	return 0;
+
+	
+	
+}

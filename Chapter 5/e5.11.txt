@@ -1,0 +1,41 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using std::vector;
+using std::string;
+using std::cout;
+using std::endl;
+using std::cin;
+
+
+int main()
+{
+	unsigned int aCnt = 0, eCnt = 0, iCnt = 0, oCnt = 0, uCnt = 0, spaceCnt = 0, tabCnt = 0, entCnt = 0;
+	char ch;
+	cout << "Enter vowels" << endl;
+	while (cin >> std::noskipws >> ch)
+	{
+		if (ch == 'a' || ch == 'A')  aCnt++;
+		else if (ch == 'e' || ch == 'E') eCnt++;
+		else if (ch == 'i' || ch == 'I') iCnt++;
+		else if (ch == 'o' || ch == 'O') oCnt++;
+		else if (ch == 'u' || ch == 'U') uCnt++;
+		else if (ch == ' ') spaceCnt++;
+		else if (ch == '\t') tabCnt++;
+		else if (ch == '\n') entCnt++;
+		else break;
+	}
+
+	cout << "Number of vowel a: \t" << aCnt << '\n'
+		<< "Number of vowel e: \t" << eCnt << '\n'
+		<< "Number of vowel i: \t" << iCnt << '\n'
+		<< "Number of vowel o: \t" << oCnt << '\n'
+		<< "Number of vowel u: \t" << uCnt << '\n'
+		<< "Number of space: \t" << spaceCnt << '\n'
+		<< "Number of tab char: \t" << tabCnt << '\n'
+		<< "Number of new line: \t" << entCnt << endl;
+
+	system("pause");
+	return 0;
+}

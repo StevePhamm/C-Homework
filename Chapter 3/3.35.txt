@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using std::vector;
+using std::string;
+using std::cout;
+using std::endl;
+using std::cin;
+
+int main()
+{
+	int a1[10];
+	int *p = a1;
+	for (int i = 0; i < 10; i++, p++)
+	{
+		*p = 0;
+	}
+	for (int j = 0; j < 10; j++)
+	{
+		cout << a1[j] << " ";
+	}
+
+	cout << endl;
+	system("pause");
+	return 0;
+}

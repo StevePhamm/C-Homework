@@ -1,0 +1,23 @@
+#include <iostream>
+#include "Sales_item.h"
+using std::cout;
+using std::cin;
+using namespace std;
+
+int main()
+{
+	Sales_item book1;
+	Sales_item book2;
+	cout << "Please enter the isbn, quantity, and price: " << endl;
+	cin >> book1 >> book2; 
+	if (book1.isbn() == book2.isbn())
+	{
+		cout << "The sum is: " << book1 + book2 << endl;
+	}
+	else
+	{
+		cout << "Different isbn" << endl;
+	}
+	system("pause");
+	return 0;
+}
